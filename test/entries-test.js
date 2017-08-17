@@ -26,4 +26,17 @@ test.describe('testing my simple blog', function() {
       assert.lengthOf(entries, 100);
     });
   });
+
+  test.it("posts an entry", function() {
+    driver.get(`${frontEndLocation}`);
+    driver.wait(until.elementLocated({css: "#entries .entry"}));
+    driver.findElement({id: 'author-field'}).sendKeys("Lauren");
+    driver.findElement({id: 'body-field'}).sendKeys("A new entry");
+    driver.findElement({css: 'input[type="submit"]'}).click();
+    driver.wait(until.elementLocated({css: "div[data-id='101']"}));
+    driver.findElements({css: "#entries .entry"})
+    .then(function (entries) {
+      assert.lengthOf(entries, 101);
+    });
+  });
 });
