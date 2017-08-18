@@ -14,6 +14,7 @@ module.exports = {
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
       { test: /\.css$/, loader: "style!css" },
       { test: /\.scss$/, loaders: ["style-loader", "css-loader", "sass-loader"] },
+      {test: /\.(jpg|png|gif|svg)$/i, loaders: ["file-loader?name=/lib/images/[name].[ext]", "url-loader?limit=100000"]},
     ]
   },
   resolve: {
