@@ -1,3 +1,5 @@
+![travis](https://travis-ci.org/charliecorrigan/quantify-this.svg?branch=master)
+
 # Quantified Self Webpack
 
 To get you started building your Quantified Self app.
