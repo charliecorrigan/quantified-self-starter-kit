@@ -9,8 +9,8 @@
     <h1>Manage Foods</h1>
     <div class="new-food-form-container">
       <form class="new-food-form">
-        Name: <input type="text" name="new-food-name">
-        Calories: <input type="text" name="new-food-calories">
+        Name: <input type="text" name="new-food-name" required="true" oninvalid="this.setCustomValidity('Please enter a food name')">
+        Calories: <input type="text" name="new-food-calories" required="true" oninvalid="this.setCustomValidity('Please enter a calorie amount')">
         <input type="submit" name="new-food-submit" value="Add Food">
       </form>
     </div>
