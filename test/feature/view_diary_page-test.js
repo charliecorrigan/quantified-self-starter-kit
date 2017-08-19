@@ -35,7 +35,7 @@ test.describe('View diary page', function() {
     });
   });
 
-  test.it('builds diary skeleton', function(){
+  test.it('builds diary meal cards', function(){
     driver.get(`${baseURL}`);
     driver.wait(webdriver.until.elementLocated({css: ".diary-frame"}));
 
