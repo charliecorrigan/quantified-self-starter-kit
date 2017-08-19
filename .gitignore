@@ -8,3 +8,7 @@ node_modules
 # Logs
 logs
 *.log
+
+# Bundles
+*.bundle.js
+
