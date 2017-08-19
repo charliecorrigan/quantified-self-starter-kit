@@ -1,16 +1,16 @@
 const assert = require('chai').assert;
-const Row = require('../../lib/javascript/diary/foodRow')
+const FoodRow = require('../../lib/javascript/diary/foodRow')
 const Food = require('../../lib/javascript/food')
 
 describe('foodRow', function(){
 
   beforeEach(function(){
     food = new Food({name: 'Spam', id: 1, calories: 1200})
-    row = new Row(food)
+    row = new FoodRow(food)
   })
 
   it('is a foodRow', function(){
-    assert.equal(row.constructor.name, 'foodRow')
+    assert.equal(row.constructor.name, 'FoodRow')
   });
 
   it('has attributes', function(){
