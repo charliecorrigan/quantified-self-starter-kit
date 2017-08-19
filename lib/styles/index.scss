@@ -1,4 +1,15 @@
+@import "./skeleton.scss";
+@import "./pages/manage-foods.scss";
+
 body {
   background-image: url("../images/modfood2.jpg");
-  // background-color: blue;
+}
+
+.delete-icon {
+  height: 30px;
+  width: 30px;
+  overflow: hidden;
+  background-image: url("../images/trash.jpg");
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
 }
