@@ -7,12 +7,21 @@
 <body>
   <div class="manage-foods-container">
     <h1>Manage Foods</h1>
-    <table class="manage-foods">
-      <tr>
-        <th>Name</th>
-        <th>Calories</th>
-      </tr>
-    </table>
+    <div class="new-food-form-container">
+      <form class="new-food-form">
+        Name: <input type="text" name="new-food-name">
+        Calories: <input type="text" name="new-food-calories">
+        <input type="submit" name="new-food-submit" value="Add Food">
+      </form>
+    </div>
+    <div class="new-food-table-container">
+      <table class="manage-foods">
+        <tr>
+          <th>Name</th>
+          <th>Calories</th>
+        </tr>
+      </table>
+    </div>
   </div>
   <script src="main.bundle.js"></script>
 </body>
