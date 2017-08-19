@@ -10,5 +10,5 @@ logs
 *.log
 
 # Bundles
-*.bundle.js
-
+main.bundle.js
+test.bundle.js
