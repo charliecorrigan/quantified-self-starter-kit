@@ -1,15 +1,27 @@
 const assert = require('chai').assert;
-const Row = require('../../../lib/diary/foodRow')
+const Row = require('../../lib/javascript/diary/foodRow')
+const Food = require('../../lib/javascript/food')
 
 describe('foodRow', function(){
 
-  is('is a foodRow', function(){
-    let row = Row.new
-    assert.typeOf(row, 'row')
+  beforeEach(function(){
+    food = new Food({name: 'Spam', id: 1, calories: 1200})
+    row = new Row(food)
+  })
+
+  it('is a foodRow', function(){
+    assert.equal(row.constructor.name, 'foodRow')
   });
 
-  it('has html', function(){
-    let row = Row.new(food)
-    assert.equals(row.html, `<span class=>`)
+  it('has attributes', function(){
+    assert.equal(row.food, food)
   })
-})
+
+  it('has html', function(){
+    assert.include(row.html(), 'Spam');
+    assert.include(row.html(), '1');
+    assert.include(row.html(), '1200');
+    assert.include(row.html(), "class='row'");
+    assert.include(row.html(), "id='foodrow1'");
+  });
+});
