@@ -45,8 +45,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	__webpack_require__(1);
-	(function webpackMissingModule() { throw new Error("Cannot find module \"dev\""); }());
-	(function webpackMissingModule() { throw new Error("Cannot find module \"server\""); }());
+	module.exports = __webpack_require__(8);
 
 
 /***/ }),
@@ -413,6 +412,12 @@
 
 /***/ }),
 /* 7 */
+/***/ (function(module, exports) {
+
+	
+
+/***/ }),
+/* 8 */
 /***/ (function(module, exports) {
 
 	
