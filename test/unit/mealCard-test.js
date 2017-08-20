@@ -4,6 +4,7 @@ const pry = require('pryjs');
 const Food = require('../../lib/javascript/food');
 const Meal = require('../../lib/javascript/meal');
 const MealCard = require('../../lib/javascript/diary/mealCard');
+const foodRow = require('../../lib/javascript/diary/foodRow');
 
 describe('mealRow', function(){
 
@@ -30,5 +31,12 @@ describe('mealRow', function(){
     assert.include(mealCard.html(), "class='meal-card'");
     assert.include(mealCard.html(), "class='meal-table'");
     assert.include(mealCard.html(), "id='meal-card1'");
+  });
+
+  it('can build rows', function(){
+    mealCard.build();
+
+    assert.equal(mealCard.foodRows.length, 1);
+    assert.instanceOf(mealCard.foodRows[0], foodRow);
   });
 });

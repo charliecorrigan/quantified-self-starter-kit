@@ -21,7 +21,19 @@ describe('Meal', function(){
     assert.deepEqual(meal.foods, []);
   });
 
-  it('can add and remove a food', function(){
+  it('can add food or foods', function(){
+    let food1 = new Food({name: 'Spam', calories: 1200, id: 1})
+    let food2 = new Food({name: 'Cake', calories: 1800, id: 2})
+    let food3 = new Food({name: 'M&Ms', calories: 200, id: 3})
+
+    meal.addFood(food1);
+    assert.deepEqual(meal.foods, [food1]);
+
+    meal.addFood([food2, food3]);
+    assert.deepEqual(meal.foods, [food1, food2, food3]);
+  });
+
+  it('can remove food)', function(){
     meal.addFood(food);
     assert.deepEqual(meal.foods, [food]);
 
