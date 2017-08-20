@@ -9,6 +9,15 @@
   }
 }
 
+.delete-icon {
+  height: 30px;
+  width: 30px;
+  overflow: hidden;
+  background-image: url("../images/trash.jpg");
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+}
+
 @media (min-width: 900px) {
   .manage-foods-container {
     width: 50%;
