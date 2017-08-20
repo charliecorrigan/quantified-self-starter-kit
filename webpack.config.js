@@ -14,7 +14,29 @@ module.exports = {
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
       { test: /\.css$/, loader: "style!css" },
       { test: /\.scss$/, loaders: ["style-loader", "css-loader", "sass-loader"] },
-      { test: /\.(jpg|png|gif|svg)$/i, loaders: ["file-loader?name=/lib/images/[name].[ext]", "url-loader?limit=100000"] }
+      { test: /\.(jpe?g|png|gif|svg)$/i,
+        loader: 'file-loader',
+        options: {
+          query: {
+            name:'assets/[name].[ext]'
+          }
+        }
+      },
+      { loader: 'image-webpack-loader',
+        options: {
+          query: {
+            mozjpeg: {
+              progressive: true,
+            },
+            gifsicle: {
+              interlaced: true,
+            },
+            optipng: {
+              optimizationLevel: 7,
+            }
+          }
+        }
+      }
     ]
   },
   resolve: {
