@@ -11,6 +11,8 @@ const Diary = require('../../lib/javascript/diary/diary');
 
 const baseURL = "http://localhost:8080";
 
+eval(pry.it)
+
 test.describe('View diary page', function() {
   var driver;
   this.timeout(10000);
