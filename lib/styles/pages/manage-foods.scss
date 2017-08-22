@@ -119,6 +119,11 @@
     tr {
       line-height: 2;
     }
+    tr:focus-within > *[contenteditable="true"] {
+      outline-style: dashed;
+      outline-color: #84D5C2;
+      outline-offset: -8px;
+      }
     tr.header-row {
       border-top: 1px solid gray;
       border-bottom: 1px solid gray;
