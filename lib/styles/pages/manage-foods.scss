@@ -76,7 +76,9 @@
       background-image:linear-gradient(top,transparent,rgba(0,0,0,0.2));
     }
     .button:hover{
-      color:#333;
+      color:#534E4E;
+      background-color: #72cfb9;
+      line-height: 1.5;
       /*{Gradient}*/
       background-image:-moz-linear-gradient(top,transparent,rgba(0,0,0,0.17));
       background-image:-webkit-linear-gradient(top,transparent,rgba(0,0,0,0.17));
@@ -148,6 +150,10 @@
   background-repeat: no-repeat;
 }
 
+.delete-icon:hover {
+  height: 26px;
+  width: 26px;
+}
 @media (min-width: 900px) {
   .manage-foods-container {
     width: 50%;
