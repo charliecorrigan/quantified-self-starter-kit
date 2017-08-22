@@ -6,8 +6,8 @@ const Meal = require('../../lib/javascript/meal');
 describe('Meal', function(){
 
   beforeEach(function(){
-    meal = new Meal({name: 'Breakfast', id: 1})
     food = new Food({name: 'Spam', calories: 1200, id: 1})
+    meal = new Meal({name: 'Breakfast', id: 1, foods: [] })
   })
 
   it('is Meal', function(){

@@ -2,13 +2,158 @@
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   border-radius: 10px;
+  opacity: 0.97;
+  h1 {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    color: #B7B24C;
+    // text-shadow: 1px 1px #8e8a39;
+    text-shadow: 2px 2px 3px #424242;
+  }
   .new-food-form-container, .new-food-table-container {
     padding: 10px;
   }
+  form.new-food-form {
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    color: #682C1C;
+    .button{
+      /*[ Position ]*/
+      padding: 0;
+      border-bottom: 0px;
+      border: 0;
+      margin: 0;
+      line-height: 1;
+      vertical-align: middle;
+      font-size: 18px;
+      display: inline;
+      height:30px;
+      width:30px;
+      cursor:pointer;
+      line-height:1;
+      background-color:#f1f1f1;
+      text-align:center;
+      text-shadow:0px -1px 1px rgba(255,255,255,0.5);
+      color:#444;
+      /* Transitions */
+      -moz-transition:.1s ease-out;
+      -webkit-transition:.1s ease-out;
+      -o-transition:.1s ease-out;
+      -ms-transition:.1s ease-out;
+      -khtml-transition:.1s ease-out;
+      transition:.1s ease-out;
+      /* Shadows */
+      box-shadow:inset 0 0 5px 0 rgba(255,255,255,0.5);
+      -moz-box-shadow:inset 0 0 5px 0 rgba(255,255,255,0.5);
+      -ms-box-shadow:inset 0 0 5px 0 rgba(255,255,255,0.5);
+      -webkit-box-shadow:inset 0 0 5px 0 rgba(255,255,255,0.5);
+      -khtml-box-shadow:inset 0 0 5px 0 rgba(255,255,255,0.5);
+      -o-box-shadow:inset 0 0 5px 0 rgba(255,255,255,0.5);
+      /* Borders */
+      user-select:none;
+      -moz-user-select:none;
+      -webkit-user-select:none;
+      -o-user-select:none;
+      -ms-user-select:none;
+      -khtml-user-select:none;
+      /*[{- Border radius -}]*/
+      border-radius:50px;
+      -moz-border-radius:50px;
+      -webkit-border-radius:50px;
+      -ms-border-radius:50px;
+      -khtml-border-radius:50px;
+      -o-border-radius:50px;
+      /* Gradient */
+      background-image:-moz-linear-gradient(top,transparent,rgba(0,0,0,0.2));
+      background-image:-webkit-linear-gradient(top,transparent,rgba(0,0,0,0.2));
+      background-image:-o-linear-gradient(top,transparent,rgba(0,0,0,0.2));
+      background-image:-khtml-linear-gradient(top,transparent,rgba(0,0,0,0.2));
+      background-image:-ms-linear-gradient(top,transparent,rgba(0,0,0,0.2));
+      background-image:linear-gradient(top,transparent,rgba(0,0,0,0.2));
+    }
+    .button:hover{
+      color:#534E4E;
+      background-color: #72cfb9;
+      line-height: 1.5;
+      /*{Gradient}*/
+      background-image:-moz-linear-gradient(top,transparent,rgba(0,0,0,0.17));
+      background-image:-webkit-linear-gradient(top,transparent,rgba(0,0,0,0.17));
+      background-image:-ms-linear-gradient(top,transparent,rgba(0,0,0,0.17));
+      background-image:-khtml-linear-gradient(top,transparent,rgba(0,0,0,0.17));
+      background-image:-o-linear-gradient(top,transparent,rgba(0,0,0,0.17));
+      background-image:linear-gradient(top,transparent,rgba(0,0,0,0.17));
+    }
+    .button:active{
+      margin-top:4px;
+      color:#777;
+      border:1px solid #999;
+      /*{Shadow}*/
+      box-shadow:inset 0 0 5px 0 #333;
+      -moz-box-shadow:inset 0 0 5px 0 #333;
+      -webkit-box-shadow:inset 0 1px 2px 0 #333, 0 1px 1px 0 #fff;
+    }
+    .text-shadow-negra{
+      text-shadow:-1px -1px 0 rgba(0,0,0,0.2);
+    }
+    .text-blanco{
+      color:#F2F2F2;
+    }
+    .text-blanco:hover{
+      color:#DDD;
+    }
+    .text-blanco:active{
+      color:#DDC;
+    }
+    .green{
+      background-color:#84D5C2;
+      border-color:#72cfb9;
+    }
+  }
+  table.manage-foods {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    color: #682C1C;
+    tr {
+      line-height: 2;
+    }
+    tr:focus-within > *[contenteditable="true"] {
+      outline: 2px;
+      outline-style: dashed;
+      outline-color: #84D5C2;
+      outline-offset: -8px;
+      }
+    tr.header-row {
+      border-top: 1px solid gray;
+      border-bottom: 1px solid gray;
+      background-color: #ddd588;
+      font-size: 18px;
+    }
+    td {
+      text-align: center;
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+  }
 }
 
+.delete-icon {
+  height: 30px;
+  width: 30px;
+  overflow: hidden;
+  background-image: url("../images/trash.png");
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+}
+
+.delete-icon:hover {
+  height: 26px;
+  width: 26px;
+}
 @media (min-width: 900px) {
   .manage-foods-container {
     width: 50%;

@@ -9,7 +9,7 @@ const foodRow = require('../../lib/javascript/diary/foodRow');
 describe('mealRow', function(){
 
   beforeEach(function(){
-    meal = new Meal({name: 'Breakfast', id: 1})
+    meal = new Meal({name: 'Breakfast', id: 1, foods: []})
     food = new Food({name: 'Spam', id: 1, calories: 1200})
 
     meal.addFood(food)
