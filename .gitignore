@@ -10,7 +10,7 @@ logs
 *.log
 
 # Bundles
-*.bundle.js
+
 
 # Selenium Tests. For now.
 test/feature/
