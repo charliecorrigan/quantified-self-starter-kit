@@ -1,0 +1,133 @@
+.diary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100vh;
+
+  .diary-frame {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 620px;
+
+    header {
+      padding: 10px;
+    }
+
+    .meal-card {
+      @include shadow();
+
+      position: relative;
+      display: flex;
+      flex-direction: column;
+
+      width: 260px;
+      height: 300px;
+
+      margin-bottom: 20px;
+      border-radius: 10px;
+
+      background-color: rgba(260, 260, 260, 0.95);
+
+      .meal-header {
+        font-size: 20px;
+        padding-bottom: 10px;
+
+        text-align: center;
+      }
+
+      .meal-table {
+        width: 100%;
+        border-collapse: collapse;
+
+        .name {
+          padding-left: 20px;
+        }
+
+        .cals {
+          padding-right: 20px;
+        }
+
+        th.cals, td.cals {
+          text-align: right;
+          width: 30%;
+        }
+
+        th.name, td.name {
+          text-align: left;
+          width: 70%;
+        }
+
+        thead {
+          th {
+            padding-bottom: 10px;
+            border-bottom: 1px solid lightgray;
+          }
+        }
+
+        tbody {
+          width: 260px;
+
+          tr {
+            height: 30px;
+            width: 260px;
+
+            .name {
+              padding-left: 20px;
+              width: 70%;
+            }
+
+            .cals {
+              padding-right: 20px;
+              width: 30%;
+            }
+
+            .rmv-btn {
+              @include shadow();
+
+              display: none;
+              position: absolute;
+
+              right: -10px;
+
+              width: 20px;
+              height: 20px;
+
+              background-color: rgba(260, 100, 100, 0.8);
+              border-radius: 5px;
+              color: rgba(100, 10, 10, 1);
+
+              align-items: center;
+              justify-content: center;
+            }
+          }
+
+          .name, .cals {
+            font-size: 12px;
+            padding: 5px 0 5px 0;
+          }
+        }
+
+        tfoot {
+          .total {
+            td {
+              border-top: 1px solid lightgray;
+              padding-top: 10px;
+              padding-bottom: 10px;
+            }
+          }
+        }
+      }
+    }
+
+    @media only screen and (max-width: 640px) {
+      flex-direction: column;
+      align-items: center;
+
+      width: 100%;
+    }
+  }
+}

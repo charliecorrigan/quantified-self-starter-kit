@@ -22,24 +22,12 @@ describe('Diary', function(){
     assert.deepEqual(diary.mealCards, []);
   });
 
-  it('can be construted with meals', function(){
-    let meals = [ new Meal({name: 'Breakfast', id: 1}),
-                  new Meal({name: 'Dinner', id: 2}),
-                  new Meal({name: 'Snacks', id: 3}) ];
+  it('can be constructed with meals', function(){
+    let meals = [ new Meal({name: 'Breakfast', id: 1, foods: [] }),
+                  new Meal({name: 'Dinner', id: 2, foods: [] }),
+                  new Meal({name: 'Snacks', id: 3, foods: [] })];
 
     let diary = new Diary(meals);
     assert.deepEqual(diary.meals, meals);
-  });
-
-  it('can be build meal cards', function(){
-    let meals = [ new Meal({name: 'Breakfast', id: 1}),
-                  new Meal({name: 'Dinner', id: 2}),
-                  new Meal({name: 'Snacks', id: 3}) ];
-
-    let diary = new Diary(meals);
-    diary.build();
-
-    assert.equal(diary.mealCards.length, 3);
-    assert.instanceOf(diary.mealCards[0], MealCard);
   });
 });
