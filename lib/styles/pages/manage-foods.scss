@@ -120,6 +120,7 @@
       line-height: 2;
     }
     tr:focus-within > *[contenteditable="true"] {
+      outline: 2px;
       outline-style: dashed;
       outline-color: #84D5C2;
       outline-offset: -8px;
