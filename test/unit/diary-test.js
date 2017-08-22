@@ -1,5 +1,3 @@
-pry = require('pryjs');
-
 const assert = require('chai').assert;
 
 const Food = require('../../lib/javascript/food');

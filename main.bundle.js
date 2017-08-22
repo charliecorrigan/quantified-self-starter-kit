@@ -417,6 +417,7 @@
 	__webpack_require__(13);
 	__webpack_require__(14);
 	__webpack_require__(15);
+	__webpack_require__(20);
 
 /***/ }),
 /* 8 */
@@ -11012,7 +11013,7 @@
 	};
 
 	function foodRow(food) {
-	  return `<tr class='row' id='${food.id}'>
+	  return `<tr class='row' id='foodrow${food.id}'>
 	            <td class='name'>${food.name}</td>
 	            <td class='cals'>${food.calories}</td>
 	            <td class='rmv-btn'>X</td>
@@ -11091,7 +11092,6 @@
 
 	  constructor(food) {
 	    this.food = food;
-	    this.body = null;
 	  }
 
 	  html() {
