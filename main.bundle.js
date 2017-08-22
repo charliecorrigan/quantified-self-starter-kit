@@ -10747,11 +10747,12 @@
 	  listen() {
 	    this.listenForDelete();
 	    this.listenForEditFoodName();
+	    this.listenForEditFoodCalories();
 	  }
 
 	  listenForDelete() {
 	    $('.manage-foods').on('click', '.delete-icon', function (event) {
-	      var foodId = event.target.classList[1].split('-').pop();
+	      let foodId = event.target.classList[1].split('-').pop();
 	      this.deleteFood(foodId);
 	      $(event.target.parentElement.parentElement).remove();
 	    }.bind(this));
@@ -10759,20 +10760,37 @@
 
 	  listenForEditFoodName() {
 	    $('.manage-foods').on('focusout', '.food-name', function (event) {
-	      var newFoodName = event.target.innerText;
-	      var id = event.target.id.split('-').pop();
-	      this.editFood(newFoodName, id);
+	      let newFoodName = event.target.innerText;
+	      let id = event.target.id.split('-').pop();
+	      this.editFood("name", newFoodName, id);
 	    }.bind(this));
 	  }
 
-	  editFood(newFoodName, id) {
+	  listenForEditFoodCalories() {
+	    $('.manage-foods').on('focusout', '.food-calories', function (event) {
+	      let newFoodCalories = event.target.innerText;
+	      let id = event.target.id.split('-').pop();
+	      this.editFood("calories", newFoodCalories, id);
+	    }.bind(this));
+	  }
+
+	  editFood(field, newFoodValue, id) {
+	    let params = this.assignParams(field, newFoodValue);
 	    $.ajax({
 	      type: "PUT",
 	      url: apiFoodUrl + id,
-	      data: { food: { name: newFoodName } }
+	      data: { food: params }
 	    }).catch(function (error) {
 	      console.log(error);
 	    });
+	  }
+
+	  assignParams(field, newFoodValue) {
+	    if (field === "name") {
+	      return { name: newFoodValue };
+	    } else {
+	      return { calories: newFoodValue };
+	    }
 	  }
 
 	  deleteFood(id) {
@@ -10794,7 +10812,7 @@
 /***/ (function(module, exports) {
 
 	function foodRow(food) {
-	  return `<tr><td class="food-name" id="food-name-${food.id}" contenteditable="true">${food.name}</td><td>${food.calories}</td><td><div class="delete-icon delete-${food.id}"></div></td><tr>`;
+	  return `<tr><td class="food-name" id="food-name-${food.id}" contenteditable="true">${food.name}</td><td class="food-calories" id="food-calories-${food.id}" contenteditable="true">${food.calories}</td><td><div class="delete-icon delete-${food.id}"></div></td><tr>`;
 	}
 
 	function foodForm() {
