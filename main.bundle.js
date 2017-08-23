@@ -10712,19 +10712,35 @@
 
 	  renderFoodTable() {
 	    $('.new-food-table-container').after(html.foodTable());
-	    this.getAllFoods();
+	    this.getAllFoods().then(this.sortFoods).then(this.renderRows);
 	  }
 
 	  getAllFoods() {
-	    $.getJSON(apiFoodUrl, function (result) {
-	      let sortedResult = result.sort(function (a, b) {
-	        return b.id - a.id;
-	      });
-	      $.each(sortedResult, function (i, food) {
-	        $('.manage-foods').append(html.foodRow(food));
-	      });
+	    return $.getJSON(apiFoodUrl);
+	  }
+
+	  sortFoods(result) {
+	    return result.sort(function (a, b) {
+	      return b.id - a.id;
 	    });
 	  }
+
+	  renderRows(result) {
+	    $.each(result, function (i, food) {
+	      $('.manage-foods').append(html.foodRow(food));
+	    });
+	  }
+
+	  // getAllFoods(){
+	  //   $.getJSON(apiFoodUrl, function(result) {
+	  //     let sortedResult = result.sort(function(a,b){
+	  //       return b.id-a.id
+	  //     });
+	  //     $.each(sortedResult, function(i, food){
+	  //       $('.manage-foods').append(html.foodRow(food));
+	  //     });
+	  //   });
+	  // };
 
 	  listen() {
 	    this.listenForDelete();
@@ -10794,7 +10810,9 @@
 /***/ (function(module, exports) {
 
 	function foodRow(food) {
-	  return `<tr><td class="food-name" id="food-name-${food.id}" contenteditable="true">${food.name}</td><td class="food-calories" id="food-calories-${food.id}" contenteditable="true">${food.calories}</td><td><div class="delete-icon delete-${food.id}"></div></td><tr>`;
+	  return `<tr><td class="food-name" id="food-name-${food.id}" contenteditable="true">${food.name}</td>
+	          <td class="food-calories" id="food-calories-${food.id}" contenteditable="true">${food.calories}</td>
+	          <td><div class="delete-icon delete-${food.id}"></div></td><tr>`;
 	}
 
 	function foodForm() {
