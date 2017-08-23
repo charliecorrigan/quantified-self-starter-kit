@@ -1,3 +1,6 @@
+// *******************************
+// MAIN DIV
+// *******************************
 .manage-foods-container {
   @include shadow();
   @include return-button();
@@ -10,15 +13,16 @@
   border-radius: 10px;
   opacity: 0.97;
 
+// *******************************
+// RETURN TO DIARY BUTTON
+// *******************************
   .link {
     padding-left: 3%;
   }
 
-  .new-food-table-container {
-    padding: 10px;
-    width: 90%;
-  }
-
+// *******************************
+// CREATE NEW FOOD FORM
+// *******************************
   form.new-food-form {
     text-align: center;
     margin-left: 6%;
@@ -29,13 +33,12 @@
     input[name=new-food-calories]{
       width: 15%;
     }
-
-
-    
   }
-  .food-filter-container {
-    // padding: 6%;
 
+// *******************************
+// FILTER FOODS FORM
+// *******************************
+  .food-filter-container {
     form.food-filter {
       text-align: center;
       margin-left: 6%;
@@ -44,6 +47,14 @@
     #food-filter {
       width: 48%;
     }
+  }
+
+// *******************************
+// FOODS TABLE
+// *******************************
+  .new-food-table-container {
+    padding: 10px;
+    width: 90%;
   }
   table.manage-foods {
     border-collapse: collapse;
@@ -71,7 +82,9 @@
   }
 }
 
-
+// *******************************
+//  > MEDIUM SCREEN
+// *******************************
 @media (min-width: 900px) {
   .manage-foods-container {
     width: 50%;
