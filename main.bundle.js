@@ -10912,66 +10912,48 @@
 
 	const html = __webpack_require__(17);
 	const MealCard = __webpack_require__(18);
-	const Food = __webpack_require__(13);
-	const Meal = __webpack_require__(14);
 	const Service = __webpack_require__(20);
-
-	const mealUrl = 'https://quantify-this-api.herokuapp.com/api/v1/meals';
 
 	class Diary {
 
-	  constructor(meals = []) {
-	    this.meals = meals;
-	    this.mealCards = [];
+	  constructor() {
+	    this.initialize();
+	    this.meals;
 	  }
 
 	  initialize() {
-	    let service = new Service(mealUrl);
-	    service.get(this.build.bind(this));
+	    return this.getMealData().done(this.makeMeals).done(this.serveMeals).done(this.listen);
 	  }
 
-	  build(result) {
-	    this.buildMeals(result);
-	    this.buildMealCards();
-	    this.updateMealCards();
-	    this.render('.diary');
+	  getMealData() {
+	    return new Service('meals').get();
 	  }
 
-	  buildMeals(result) {
-	    this.meals = result.map(function (meal) {
-	      this.buildFoods(meal);
-
-	      return new Meal(meal);
-	    }.bind(this));
-	  }
-
-	  buildFoods(meal) {
-	    meal.foods = meal.foods.map(function (food) {
-	      return new Food(food);
-	    });
-	  }
-
-	  buildMealCards() {
-	    this.mealCards = this.meals.map(function (meal) {
+	  makeMeals(result) {
+	    return result.map(function (meal) {
 	      return new MealCard(meal);
 	    });
 	  }
 
-	  updateMealCards() {
-	    this.mealCards.forEach(function (mealCard) {
-	      mealCard.build();
+	  serveMeals(mealCards) {
+	    $('.diary').append(html.diaryFrame());
+
+	    mealCards.forEach(function (mealCard) {
+	      mealCard.serveMeal();
 	    });
 	  }
 
-	  html() {
-	    return html.diaryFrame();
-	  }
+	  listen(status) {
+	    debugger;
+	    $('.row').hover(function (event) {
+	      let btn = $(event.target).find('.rmv-btn');
+	      btn.css('display', 'flex').show();
+	    }, function () {
+	      $(event.target).find('.rmv-btn').hide();
+	    });
 
-	  render(element) {
-	    $(element).append(this.html());
-
-	    this.mealCards.forEach(function (mealCard) {
-	      mealCard.render('.diary-frame');
+	    $(".diary").on("click", ".rmv-btn", () => {
+	      debugger;
 	    });
 	  }
 	};
@@ -11013,7 +10995,7 @@
 	};
 
 	function foodRow(food) {
-	  return `<tr class='row' id='foodrow${food.id}'>
+	  return `<tr class='row' id='foodrow${food.id}' data-foodId='${food.id}'>
 	            <td class='name'>${food.name}</td>
 	            <td class='cals'>${food.calories}</td>
 	            <td class='rmv-btn'>X</td>
@@ -11030,53 +11012,48 @@
 
 	const html = __webpack_require__(17);
 	const FoodRow = __webpack_require__(19);
+	const Service = __webpack_require__(20);
+
+	const mealUrl = 'https://quantify-this-api.herokuapp.com/api/v1/meals';
 
 	class MealCard {
 
 	  constructor(meal) {
 	    this.meal = meal;
-	    this.foodRows = [];
+	    this.base = 0;
 	  }
 
-	  html() {
-	    return html.mealCard(this.meal);
-	  }
+	  serveMeal() {
+	    $('.diary-frame').append(html.mealCard(this));
 
-	  build() {
-	    this.foodRows = this.meal.foods.map(function (food) {
-	      return new FoodRow(food);
+	    this.meal.foods.forEach(function (food) {
+	      $('.foods' + food.id).append(html.foodRow(food));
 	    });
 	  }
 
-	  render(element) {
-	    $(element).append(this.html());
-
-	    this.foodRows.forEach(function (foodRow) {
-	      foodRow.render('#foods' + this.meal.id);
-	    }.bind(this));
-
-	    this.listenFor();
+	  total() {
+	    return this.foods.reduce(function (total, food) {
+	      return total + food.calories;
+	    }, 0);
 	  }
 
-	  listenFor() {
-	    this.rowHover(this.deleteClick);
+	  remaining() {
+	    return this.base - this.total();
 	  }
 
-	  rowHover(deleteClick) {
-	    $('.row').hover(function () {
-	      let btn = $(this).find('.rmv-btn');
-
-	      deleteClick(btn);
-	      btn.css('display', 'flex').show();
-	    }, function () {
-	      $(this).find('.rmv-btn').hide();
-	    });
+	  deleteRow(event) {
+	    let row = $(event.target.parentElement);
+	    this.removeFood(row[0].dataset.foodid);
+	    row.remove();
 	  }
 
-	  deleteClick(btn) {
-	    btn.on('click', function (event) {
-	      $(event.target.parentElement).remove();
-	    });
+	  removeFood(foodId) {
+	    let service = new Service('meals/' + this.meal.id + '/foods/' + foodId);
+	    service.delete(this.confirmDelete.bind(this));
+	  }
+
+	  confirmDelete(result) {
+	    debugger;
 	  }
 	};
 
@@ -11091,15 +11068,15 @@
 	class FoodRow {
 
 	  constructor(food) {
-	    this.food = food;
+	    this.initialize(food);
 	  }
 
-	  html() {
-	    return html.foodRow(this.food);
+	  initialize(food) {
+	    $(food).append(this.html(food));
 	  }
 
-	  render(element) {
-	    $(element).append(this.html());
+	  html(food) {
+	    return html.foodRow(food);
 	  }
 	};
 
@@ -11109,14 +11086,30 @@
 /* 20 */
 /***/ (function(module, exports) {
 
+	
+
 	class Service {
 
-	  constructor(url) {
-	    this.url = url;
+	  constructor(endpoint) {
+	    // this.baseUrl = 'https://quantify-this-api.herokuapp.com/api/v1/' + endpoint
+	    this.baseUrl = 'http://localhost:3000/api/v1/' + endpoint;
 	  }
 
 	  get(callback) {
-	    $.getJSON(this.url, callback);
+	    return $.get(this.baseUrl);
+	  }
+
+	  delete(callback) {
+	    $.ajax({
+	      url: this.url,
+	      method: 'DELETE',
+	      success: function () {
+	        alert('Success');
+	      },
+	      error: function () {
+	        alert('Failure');
+	      }
+	    });
 	  }
 	}
 
@@ -11131,9 +11124,7 @@
 	const Diary = __webpack_require__(16);
 
 	$(document).ready(function () {
-
 	  let diary = new Diary();
-	  diary.initialize();
 	});
 
 /***/ })
