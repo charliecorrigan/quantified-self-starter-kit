@@ -1,0 +1,17 @@
+@mixin delete-icon(){
+  .delete-icon {
+    height: 30px;
+    width: 30px;
+    overflow: hidden;
+    background-image: url("../images/trash.png");
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+  }
+
+  .delete-icon:hover {
+    height: 26px;
+    width: 26px;
+    cursor: pointer;
+    cursor: hand;
+  }
+}
