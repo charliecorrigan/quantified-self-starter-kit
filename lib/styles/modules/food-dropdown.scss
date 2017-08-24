@@ -1,0 +1,40 @@
+.food-dropdown-body {
+  position: relative;
+  width: 260px;
+
+  .food-menu-context {
+    position: relative;
+    width: 260px;
+
+    .food-input {
+      border-top: 1px solid lightgray;
+      padding: 0 20px 0 20px;
+
+      width: 260px;
+
+      text-align: center;
+    }
+
+    .food-input:focus {
+      outline: none;
+    }
+  }
+
+  .food-dropdown {
+    @include shadow();
+
+    position: absolute;
+    z-index: 3000;
+
+    left: 0;
+    transform: translate(0, 10px);
+
+    width: 260px;
+    height: 200px;
+
+    background-color: rgba(260, 260, 260, 0.9);
+    border-radius: 10px;
+
+    overflow: scroll;
+  }
+}
