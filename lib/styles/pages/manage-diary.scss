@@ -105,6 +105,15 @@
             }
           }
 
+          #food-menu {
+            @include shadow();
+            padding: 10px 10px 10px 10px;
+
+            .menu {
+              text-align: center;
+            }
+          }
+
           .name, .cals {
             font-size: 12px;
             padding: 5px 0 5px 0;
