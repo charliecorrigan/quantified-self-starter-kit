@@ -11010,11 +11010,11 @@
 	class Diary {
 
 	  constructor() {
-	    this.meals = this.initialize();
+	    this.meals;
 	  }
 
-	  initialize() {
-	    return $.when(this.getMealData()).then(this.makeMeals).then(this.serveMeals).then(this.listen);
+	  open() {
+	    $.when(this.getMealData()).then(this.makeMeals).then(this.serveMeals).then(this.listen);
 	  }
 
 	  findMeal(id) {
@@ -11195,8 +11195,8 @@
 	class Service {
 
 	  constructor(endpoint) {
-	    // this.baseUrl = 'https://quantify-this-api.herokuapp.com/api/v1/' + endpoint
-	    this.baseUrl = 'http://localhost:3000/api/v1/' + endpoint;
+	    this.baseUrl = 'https://quantify-this-api.herokuapp.com/api/v1/' + endpoint;
+	    // this.baseUrl = 'http://localhost:3000/api/v1/' + endpoint
 	  }
 
 	  get(callback) {
@@ -11228,7 +11228,7 @@
 	const Diary = __webpack_require__(17);
 
 	$(document).ready(function () {
-	  diary = new Diary();
+	  diary = new Diary().open();
 	});
 
 /***/ })
