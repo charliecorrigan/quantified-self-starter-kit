@@ -1,7 +1,6 @@
 const assert = require('chai').assert;
+$ = require('jquery');
 
-const Food = require('../../lib/javascript/food');
-const Meal = require('../../lib/javascript/meal');
 const Diary = require('../../lib/javascript/diary/diary');
 const MealCard = require('../../lib/javascript/diary/mealCard');
 
@@ -16,16 +15,16 @@ describe('Diary', function(){
   });
 
   it('has attributes', function(){
-    assert.deepEqual(diary.meals, []);
-    assert.deepEqual(diary.mealCards, []);
+    assert.deepEqual(diary.meals, {});
   });
 
-  it('can be constructed with meals', function(){
-    let meals = [ new Meal({name: 'Breakfast', id: 1, foods: [] }),
-                  new Meal({name: 'Dinner', id: 2, foods: [] }),
-                  new Meal({name: 'Snacks', id: 3, foods: [] })];
+  xit('can find a meal', function(){
+    let meal1 = new MealCard({name: 'Breakfast', id: 1, foods: [] });
+    let meal2 = new MealCard({name: 'Dinner', id: 2, foods: [] });
+    let meal3 = new MealCard({name: 'Snacks', id: 3, foods: [] });
 
-    let diary = new Diary(meals);
-    assert.deepEqual(diary.meals, meals);
+    diary.meals = [ meal1, meal2, meal3 ]
+
+    assert.equal(diary.find(2), meal2);
   });
 });
