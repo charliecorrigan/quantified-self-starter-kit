@@ -6,9 +6,15 @@ div {
 
 body {
   background-image: url("../images/modfood2.jpg");
+  font-family: 'Ubuntu', sans-serif;
+  color: #682C1C;
 }
 
 h1 {
   font-family: 'Fontdiner Swanky', cursive;
   font-size: 36px;
+  padding: 20px 0 20px 0;
+  text-align: center;
+  color: $medium-green;
+  text-shadow: 2px 2px 3px $dark-gray;
 }
