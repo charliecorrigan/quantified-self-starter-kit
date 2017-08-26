@@ -84,7 +84,7 @@
 	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Fontdiner+Swanky|Roboto|Ubuntu);", ""]);
 
 	// module
-	exports.push([module.id, "div {\n  background-color: #FFFFFF; }\n\nbody {\n  background-image: url(" + __webpack_require__(4) + ");\n  font-family: 'Ubuntu', sans-serif;\n  color: #682C1C; }\n\nh1 {\n  font-family: 'Fontdiner Swanky', cursive;\n  font-size: 36px;\n  padding: 20px 0 20px 0;\n  text-align: center;\n  color: #B7B24C;\n  text-shadow: 2px 2px 3px #424242; }\n\n.manage-foods-container {\n  -webkit-box-shadow: 1px 1px 10px 0.5px rgba(0, 0, 0, 0.8);\n  -moz-box-shadow: 1px 1px 10px 0.5px rgba(0, 0, 0, 0.8);\n  box-shadow: 1px 1px 10px 0.5px rgba(0, 0, 0, 0.8);\n  width: 90%;\n  margin: 0 auto;\n  padding: 20px 0 20px 0;\n  border-radius: 10px;\n  opacity: 0.97; }\n  .manage-foods-container .return-to-diary {\n    border-radius: 50%;\n    height: 40px;\n    position: absolute;\n    background-color: #84D5C2;\n    border-color: transparent;\n    font-family: 'Ubuntu', sans-serif;\n    color: white;\n    font-size: 12px;\n    /* Transitions */\n    -moz-transition: .1s ease-out;\n    -webkit-transition: .1s ease-out;\n    -o-transition: .1s ease-out;\n    -ms-transition: .1s ease-out;\n    -khtml-transition: .1s ease-out;\n    transition: .1s ease-out;\n    /* Shadows */\n    box-shadow: inset 0 0 5px 0 rgba(255, 255, 255, 0.5);\n    -moz-box-shadow: inset 0 0 5px 0 rgba(255, 255, 255, 0.5);\n    -ms-box-shadow: inset 0 0 5px 0 rgba(255, 255, 255, 0.5);\n    -webkit-box-shadow: inset 0 0 5px 0 rgba(255, 255, 255, 0.5);\n    -khtml-box-shadow: inset 0 0 5px 0 rgba(255, 255, 255, 0.5);\n    -o-box-shadow: inset 0 0 5px 0 rgba(255, 255, 255, 0.5);\n    /* Borders */\n    user-select: none;\n    -moz-user-select: none;\n    -webkit-user-select: none;\n    -o-user-select: none;\n    -ms-user-select: none;\n    -khtml-user-select: none;\n    /*[{- Border radius -}]*/\n    border-radius: 50px;\n    -moz-border-radius: 50px;\n    -webkit-border-radius: 50px;\n    -ms-border-radius: 50px;\n    -khtml-border-radius: 50px;\n    -o-border-radius: 50px;\n    /* Gradient */\n    background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.2));\n    background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.2));\n    background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.2));\n    background-image: -khtml-linear-gradient(top, transparent, rgba(0, 0, 0, 0.2));\n    background-image: -ms-linear-gradient(top, transparent, rgba(0, 0, 0, 0.2));\n    background-image: linear-gradient(top, transparent, rgba(0, 0, 0, 0.2)); }\n  .manage-foods-container .return-to-diary:hover {\n    color: white;\n    -moz-box-shadow: -5px -5px 5px #9F9D9D;\n    -webkit-box-shadow: -5px -5px 5px #9F9D9D;\n    box-shadow: -.5px -.5px 5px #9F9D9D;\n    cursor: pointer;\n    cursor: hand; }\n  .manage-foods-container .delete-icon {\n    height: 30px;\n    width: 30px;\n    overflow: hidden;\n    background-image: url(" + __webpack_require__(5) + ");\n    background-size: 30px 30px;\n    background-repeat: no-repeat; }\n  .manage-foods-container .delete-icon:hover {\n    height: 26px;\n    width: 26px;\n    cursor: pointer;\n    cursor: hand; }\n  .manage-foods-container .button {\n    /*[ Position ]*/\n    padding: 0;\n    border-bottom: 0px;\n    border: 0;\n    margin: 0;\n    line-height: 1;\n    vertical-align: middle;\n    font-size: 18px;\n    display: inline;\n    height: 30px;\n    width: 30px !important;\n    cursor: pointer;\n    line-height: 1;\n    background-color: #f1f1f1;\n    text-align: center;\n    text-shadow: 0px -1px 1px rgba(255, 255, 255, 0.5);\n    color: #444;\n    /* Transitions */\n    -moz-transition: .1s ease-out;\n    -webkit-transition: .1s ease-out;\n    -o-transition: .1s ease-out;\n    -ms-transition: .1s ease-out;\n    -khtml-transition: .1s ease-out;\n    transition: .1s ease-out;\n    /* Shadows */\n    box-shadow: inset 0 0 5px 0 rgba(255, 255, 255, 0.5);\n    -moz-box-shadow: inset 0 0 5px 0 rgba(255, 255, 255, 0.5);\n    -ms-box-shadow: inset 0 0 5px 0 rgba(255, 255, 255, 0.5);\n    -webkit-box-shadow: inset 0 0 5px 0 rgba(255, 255, 255, 0.5);\n    -khtml-box-shadow: inset 0 0 5px 0 rgba(255, 255, 255, 0.5);\n    -o-box-shadow: inset 0 0 5px 0 rgba(255, 255, 255, 0.5);\n    /* Borders */\n    user-select: none;\n    -moz-user-select: none;\n    -webkit-user-select: none;\n    -o-user-select: none;\n    -ms-user-select: none;\n    -khtml-user-select: none;\n    /*[{- Border radius -}]*/\n    border-radius: 50px;\n    -moz-border-radius: 50px;\n    -webkit-border-radius: 50px;\n    -ms-border-radius: 50px;\n    -khtml-border-radius: 50px;\n    -o-border-radius: 50px;\n    /* Gradient */\n    background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.2));\n    background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.2));\n    background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.2));\n    background-image: -khtml-linear-gradient(top, transparent, rgba(0, 0, 0, 0.2));\n    background-image: -ms-linear-gradient(top, transparent, rgba(0, 0, 0, 0.2));\n    background-image: linear-gradient(top, transparent, rgba(0, 0, 0, 0.2)); }\n  .manage-foods-container .button:hover {\n    color: #534E4E;\n    background-color: #72cfb9;\n    -moz-box-shadow: -5px -5px 5px #9F9D9D;\n    -webkit-box-shadow: -5px -5px 5px #9F9D9D;\n    box-shadow: -.5px -.5px 5px #9F9D9D;\n    /*{Gradient}*/\n    background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.17));\n    background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.17));\n    background-image: -ms-linear-gradient(top, transparent, rgba(0, 0, 0, 0.17));\n    background-image: -khtml-linear-gradient(top, transparent, rgba(0, 0, 0, 0.17));\n    background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.17));\n    background-image: linear-gradient(top, transparent, rgba(0, 0, 0, 0.17)); }\n  .manage-foods-container .button:active {\n    margin-top: 4px;\n    color: #777;\n    border: 1px solid #999;\n    /*{Shadow}*/\n    box-shadow: inset 0 0 5px 0 #333;\n    -moz-box-shadow: inset 0 0 5px 0 #333;\n    -webkit-box-shadow: inset 0 1px 2px 0 #333, 0 1px 1px 0 #fff; }\n  .manage-foods-container .text-shadow-negra {\n    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2); }\n  .manage-foods-container .text-blanco {\n    color: #F2F2F2; }\n  .manage-foods-container .text-blanco:hover {\n    color: #DDD; }\n  .manage-foods-container .text-blanco:active {\n    color: #DDC; }\n  .manage-foods-container .green {\n    background-color: #84D5C2;\n    border-color: #72cfb9; }\n  .manage-foods-container .link {\n    padding-left: 3%; }\n  .manage-foods-container form.new-food-form {\n    text-align: center;\n    margin-left: 6%;\n    margin-right: 6%; }\n    .manage-foods-container form.new-food-form input {\n      width: 25%; }\n    .manage-foods-container form.new-food-form input[name=new-food-calories] {\n      width: 15%; }\n  .manage-foods-container .food-filter-container form.food-filter {\n    text-align: center;\n    margin-left: 6%;\n    margin-right: 6%; }\n  .manage-foods-container .food-filter-container #food-filter {\n    width: 48%; }\n  .manage-foods-container .new-food-table-container {\n    padding: 10px;\n    width: 90%; }\n  .manage-foods-container table.manage-foods {\n    border-collapse: collapse;\n    width: 100%; }\n    .manage-foods-container table.manage-foods tr {\n      line-height: 2; }\n    .manage-foods-container table.manage-foods tr:focus-within > *[contenteditable=\"true\"] {\n      outline: 2px;\n      outline-style: dashed;\n      outline-color: #84D5C2;\n      outline-offset: -8px; }\n    .manage-foods-container table.manage-foods tr.header-row {\n      border-top: 1px solid gray;\n      border-bottom: 1px solid gray;\n      background-color: #ddd588;\n      font-size: 18px; }\n    .manage-foods-container table.manage-foods td {\n      text-align: center;\n      padding-left: 10%;\n      padding-right: 10%; }\n\n@media (min-width: 900px) {\n  .manage-foods-container {\n    width: 50%; } }\n\n.diary {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 100%;\n  height: 100vh; }\n  .diary .diary-frame {\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: space-between;\n    width: 620px; }\n    .diary .diary-frame header {\n      padding: 10px; }\n    .diary .diary-frame .meal-card {\n      -webkit-box-shadow: 1px 1px 10px 0.5px rgba(0, 0, 0, 0.8);\n      -moz-box-shadow: 1px 1px 10px 0.5px rgba(0, 0, 0, 0.8);\n      box-shadow: 1px 1px 10px 0.5px rgba(0, 0, 0, 0.8);\n      position: relative;\n      display: flex;\n      flex-direction: column;\n      width: 260px;\n      height: 300px;\n      margin-bottom: 20px;\n      border-radius: 10px;\n      background-color: rgba(255, 255, 255, 0.95); }\n      .diary .diary-frame .meal-card .meal-header {\n        font-size: 20px;\n        padding-bottom: 10px;\n        text-align: center; }\n      .diary .diary-frame .meal-card .meal-table {\n        width: 100%;\n        border-collapse: collapse; }\n        .diary .diary-frame .meal-card .meal-table .name {\n          padding-left: 20px; }\n        .diary .diary-frame .meal-card .meal-table .cals {\n          padding-right: 20px; }\n        .diary .diary-frame .meal-card .meal-table th.cals, .diary .diary-frame .meal-card .meal-table td.cals {\n          text-align: right;\n          width: 30%; }\n        .diary .diary-frame .meal-card .meal-table th.name, .diary .diary-frame .meal-card .meal-table td.name {\n          text-align: left;\n          width: 70%; }\n        .diary .diary-frame .meal-card .meal-table thead th {\n          padding-bottom: 10px;\n          border-bottom: 1px solid lightgray; }\n        .diary .diary-frame .meal-card .meal-table tbody {\n          width: 260px; }\n          .diary .diary-frame .meal-card .meal-table tbody tr {\n            height: 30px;\n            width: 260px; }\n            .diary .diary-frame .meal-card .meal-table tbody tr .name {\n              padding-left: 20px;\n              width: 70%; }\n            .diary .diary-frame .meal-card .meal-table tbody tr .cals {\n              padding-right: 20px;\n              width: 30%; }\n            .diary .diary-frame .meal-card .meal-table tbody tr .rmv-btn {\n              -webkit-box-shadow: 1px 1px 10px 0.5px rgba(0, 0, 0, 0.8);\n              -moz-box-shadow: 1px 1px 10px 0.5px rgba(0, 0, 0, 0.8);\n              box-shadow: 1px 1px 10px 0.5px rgba(0, 0, 0, 0.8);\n              display: none;\n              position: absolute;\n              right: -10px;\n              width: 20px;\n              height: 20px;\n              background-color: rgba(255, 100, 100, 0.8);\n              border-radius: 5px;\n              color: #640a0a;\n              align-items: center;\n              justify-content: center; }\n          .diary .diary-frame .meal-card .meal-table tbody .name, .diary .diary-frame .meal-card .meal-table tbody .cals {\n            font-size: 12px;\n            padding: 5px 0 5px 0; }\n        .diary .diary-frame .meal-card .meal-table tfoot .total td {\n          border-top: 1px solid lightgray;\n          padding-top: 10px;\n          padding-bottom: 10px; }\n    @media only screen and (max-width: 640px) {\n      .diary .diary-frame {\n        flex-direction: column;\n        align-items: center;\n        width: 100%; } }\n", ""]);
+	exports.push([module.id, "div {\n  background-color: #FFFFFF; }\n\nbody {\n  background-image: url(" + __webpack_require__(4) + ");\n  font-family: 'Ubuntu', sans-serif;\n  color: #682C1C; }\n\nh1 {\n  font-family: 'Fontdiner Swanky', cursive;\n  font-size: 36px;\n  padding: 20px 0 20px 0;\n  text-align: center;\n  color: #B7B24C;\n  text-shadow: 2px 2px 3px #424242; }\n\n.manage-foods-container {\n  -webkit-box-shadow: 1px 1px 10px 0.5px rgba(0, 0, 0, 0.8);\n  -moz-box-shadow: 1px 1px 10px 0.5px rgba(0, 0, 0, 0.8);\n  box-shadow: 1px 1px 10px 0.5px rgba(0, 0, 0, 0.8);\n  width: 90%;\n  margin: 0 auto;\n  padding: 20px 0 20px 0;\n  border-radius: 10px;\n  opacity: 0.97; }\n  .manage-foods-container .return-to-diary {\n    border-radius: 50%;\n    height: 40px;\n    position: absolute;\n    background-color: #84D5C2;\n    border-color: transparent;\n    font-family: 'Ubuntu', sans-serif;\n    color: white;\n    font-size: 12px;\n    /* Transitions */\n    -moz-transition: .1s ease-out;\n    -webkit-transition: .1s ease-out;\n    -o-transition: .1s ease-out;\n    -ms-transition: .1s ease-out;\n    -khtml-transition: .1s ease-out;\n    transition: .1s ease-out;\n    /* Shadows */\n    box-shadow: inset 0 0 5px 0 rgba(255, 255, 255, 0.5);\n    -moz-box-shadow: inset 0 0 5px 0 rgba(255, 255, 255, 0.5);\n    -ms-box-shadow: inset 0 0 5px 0 rgba(255, 255, 255, 0.5);\n    -webkit-box-shadow: inset 0 0 5px 0 rgba(255, 255, 255, 0.5);\n    -khtml-box-shadow: inset 0 0 5px 0 rgba(255, 255, 255, 0.5);\n    -o-box-shadow: inset 0 0 5px 0 rgba(255, 255, 255, 0.5);\n    /* Borders */\n    user-select: none;\n    -moz-user-select: none;\n    -webkit-user-select: none;\n    -o-user-select: none;\n    -ms-user-select: none;\n    -khtml-user-select: none;\n    /*[{- Border radius -}]*/\n    border-radius: 50px;\n    -moz-border-radius: 50px;\n    -webkit-border-radius: 50px;\n    -ms-border-radius: 50px;\n    -khtml-border-radius: 50px;\n    -o-border-radius: 50px;\n    /* Gradient */\n    background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.2));\n    background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.2));\n    background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.2));\n    background-image: -khtml-linear-gradient(top, transparent, rgba(0, 0, 0, 0.2));\n    background-image: -ms-linear-gradient(top, transparent, rgba(0, 0, 0, 0.2));\n    background-image: linear-gradient(top, transparent, rgba(0, 0, 0, 0.2)); }\n  .manage-foods-container .return-to-diary:hover {\n    color: white;\n    -moz-box-shadow: -5px -5px 5px #9F9D9D;\n    -webkit-box-shadow: -5px -5px 5px #9F9D9D;\n    box-shadow: -.5px -.5px 5px #9F9D9D;\n    cursor: pointer;\n    cursor: hand; }\n  .manage-foods-container .delete-icon {\n    height: 30px;\n    width: 30px;\n    overflow: hidden;\n    background-image: url(" + __webpack_require__(5) + ");\n    background-size: 30px 30px;\n    background-repeat: no-repeat; }\n  .manage-foods-container .delete-icon:hover {\n    height: 26px;\n    width: 26px;\n    cursor: pointer;\n    cursor: hand; }\n  .manage-foods-container .button {\n    /*[ Position ]*/\n    padding: 0;\n    border-bottom: 0px;\n    border: 0;\n    margin: 0;\n    line-height: 1;\n    vertical-align: middle;\n    font-size: 18px;\n    display: inline;\n    height: 30px;\n    width: 30px !important;\n    cursor: pointer;\n    line-height: 1;\n    background-color: #f1f1f1;\n    text-align: center;\n    text-shadow: 0px -1px 1px rgba(255, 255, 255, 0.5);\n    color: #444;\n    /* Transitions */\n    -moz-transition: .1s ease-out;\n    -webkit-transition: .1s ease-out;\n    -o-transition: .1s ease-out;\n    -ms-transition: .1s ease-out;\n    -khtml-transition: .1s ease-out;\n    transition: .1s ease-out;\n    /* Shadows */\n    box-shadow: inset 0 0 5px 0 rgba(255, 255, 255, 0.5);\n    -moz-box-shadow: inset 0 0 5px 0 rgba(255, 255, 255, 0.5);\n    -ms-box-shadow: inset 0 0 5px 0 rgba(255, 255, 255, 0.5);\n    -webkit-box-shadow: inset 0 0 5px 0 rgba(255, 255, 255, 0.5);\n    -khtml-box-shadow: inset 0 0 5px 0 rgba(255, 255, 255, 0.5);\n    -o-box-shadow: inset 0 0 5px 0 rgba(255, 255, 255, 0.5);\n    /* Borders */\n    user-select: none;\n    -moz-user-select: none;\n    -webkit-user-select: none;\n    -o-user-select: none;\n    -ms-user-select: none;\n    -khtml-user-select: none;\n    /*[{- Border radius -}]*/\n    border-radius: 50px;\n    -moz-border-radius: 50px;\n    -webkit-border-radius: 50px;\n    -ms-border-radius: 50px;\n    -khtml-border-radius: 50px;\n    -o-border-radius: 50px;\n    /* Gradient */\n    background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.2));\n    background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.2));\n    background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.2));\n    background-image: -khtml-linear-gradient(top, transparent, rgba(0, 0, 0, 0.2));\n    background-image: -ms-linear-gradient(top, transparent, rgba(0, 0, 0, 0.2));\n    background-image: linear-gradient(top, transparent, rgba(0, 0, 0, 0.2)); }\n  .manage-foods-container .button:hover {\n    color: #534E4E;\n    background-color: #72cfb9;\n    -moz-box-shadow: -5px -5px 5px #9F9D9D;\n    -webkit-box-shadow: -5px -5px 5px #9F9D9D;\n    box-shadow: -.5px -.5px 5px #9F9D9D;\n    /*{Gradient}*/\n    background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.17));\n    background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.17));\n    background-image: -ms-linear-gradient(top, transparent, rgba(0, 0, 0, 0.17));\n    background-image: -khtml-linear-gradient(top, transparent, rgba(0, 0, 0, 0.17));\n    background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.17));\n    background-image: linear-gradient(top, transparent, rgba(0, 0, 0, 0.17)); }\n  .manage-foods-container .button:active {\n    margin-top: 4px;\n    color: #777;\n    border: 1px solid #999;\n    /*{Shadow}*/\n    box-shadow: inset 0 0 5px 0 #333;\n    -moz-box-shadow: inset 0 0 5px 0 #333;\n    -webkit-box-shadow: inset 0 1px 2px 0 #333, 0 1px 1px 0 #fff; }\n  .manage-foods-container .text-shadow-negra {\n    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2); }\n  .manage-foods-container .text-blanco {\n    color: #F2F2F2; }\n  .manage-foods-container .text-blanco:hover {\n    color: #DDD; }\n  .manage-foods-container .text-blanco:active {\n    color: #DDC; }\n  .manage-foods-container .green {\n    background-color: #84D5C2;\n    border-color: #72cfb9; }\n  .manage-foods-container .link {\n    padding-left: 3%; }\n  .manage-foods-container form.new-food-form {\n    text-align: center;\n    margin-left: 6%;\n    margin-right: 6%; }\n    .manage-foods-container form.new-food-form input {\n      width: 25%; }\n    .manage-foods-container form.new-food-form input[name=new-food-calories] {\n      width: 15%; }\n  .manage-foods-container .food-filter-container form.food-filter {\n    text-align: center;\n    margin-left: 6%;\n    margin-right: 6%; }\n  .manage-foods-container .food-filter-container #food-filter {\n    width: 48%; }\n  .manage-foods-container .new-food-table-container {\n    padding: 10px;\n    width: 90%; }\n  .manage-foods-container table.manage-foods {\n    border-collapse: collapse;\n    width: 100%; }\n    .manage-foods-container table.manage-foods tr {\n      line-height: 2; }\n    .manage-foods-container table.manage-foods tr:focus-within > *[contenteditable=\"true\"] {\n      outline: 2px;\n      outline-style: dashed;\n      outline-color: #84D5C2;\n      outline-offset: -8px; }\n    .manage-foods-container table.manage-foods tr.header-row {\n      border-top: 1px solid gray;\n      border-bottom: 1px solid gray;\n      background-color: #ddd588;\n      font-size: 18px; }\n    .manage-foods-container table.manage-foods td {\n      text-align: center;\n      padding-left: 10%;\n      padding-right: 10%; }\n\n@media (min-width: 900px) {\n  .manage-foods-container {\n    width: 50%; } }\n\n.diary {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 100%;\n  height: 100vh; }\n  .diary .diary-frame {\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: space-between;\n    width: 620px; }\n    .diary .diary-frame header {\n      padding: 10px; }\n    .diary .diary-frame .meal-card {\n      -webkit-box-shadow: 1px 1px 10px 0.5px rgba(0, 0, 0, 0.8);\n      -moz-box-shadow: 1px 1px 10px 0.5px rgba(0, 0, 0, 0.8);\n      box-shadow: 1px 1px 10px 0.5px rgba(0, 0, 0, 0.8);\n      position: relative;\n      display: flex;\n      flex-direction: column;\n      width: 260px;\n      height: 300px;\n      margin-bottom: 20px;\n      border-radius: 10px;\n      background-color: rgba(255, 255, 255, 0.95); }\n      .diary .diary-frame .meal-card .meal-header {\n        font-size: 20px;\n        padding-bottom: 10px;\n        text-align: center; }\n      .diary .diary-frame .meal-card .meal-table {\n        width: 100%;\n        border-collapse: collapse; }\n        .diary .diary-frame .meal-card .meal-table .name {\n          padding-left: 20px; }\n        .diary .diary-frame .meal-card .meal-table .cals {\n          padding-right: 20px; }\n        .diary .diary-frame .meal-card .meal-table th.cals, .diary .diary-frame .meal-card .meal-table td.cals {\n          text-align: right;\n          width: 30%; }\n        .diary .diary-frame .meal-card .meal-table th.name, .diary .diary-frame .meal-card .meal-table td.name {\n          text-align: left;\n          width: 70%; }\n        .diary .diary-frame .meal-card .meal-table thead th {\n          padding-bottom: 10px;\n          border-bottom: 1px solid lightgray; }\n        .diary .diary-frame .meal-card .meal-table tbody {\n          width: 260px; }\n          .diary .diary-frame .meal-card .meal-table tbody tr {\n            height: 30px;\n            width: 260px; }\n            .diary .diary-frame .meal-card .meal-table tbody tr .name {\n              padding-left: 20px;\n              width: 70%; }\n            .diary .diary-frame .meal-card .meal-table tbody tr .cals {\n              padding-right: 20px;\n              width: 30%; }\n            .diary .diary-frame .meal-card .meal-table tbody tr .rmv-btn {\n              -webkit-box-shadow: 1px 1px 10px 0.5px rgba(0, 0, 0, 0.8);\n              -moz-box-shadow: 1px 1px 10px 0.5px rgba(0, 0, 0, 0.8);\n              box-shadow: 1px 1px 10px 0.5px rgba(0, 0, 0, 0.8);\n              display: none;\n              position: absolute;\n              right: -10px;\n              width: 20px;\n              height: 20px;\n              background-color: rgba(255, 100, 100, 0.8);\n              border-radius: 5px;\n              color: #640a0a;\n              align-items: center;\n              justify-content: center; }\n          .diary .diary-frame .meal-card .meal-table tbody .name, .diary .diary-frame .meal-card .meal-table tbody .cals {\n            font-size: 12px;\n            padding: 5px 0 5px 0; }\n        .diary .diary-frame .meal-card .meal-table tfoot .total td {\n          border-top: 1px solid lightgray;\n          padding-top: 10px;\n          padding-bottom: 10px; }\n    @media only screen and (max-width: 640px) {\n      .diary .diary-frame {\n        flex-direction: column;\n        align-items: center;\n        width: 100%; } }\n\n.food-dropdown-body {\n  position: relative;\n  width: 260px;\n  background-color: rgba(255, 255, 255, 0.8); }\n  .food-dropdown-body .food-menu-context {\n    position: relative;\n    width: 260px; }\n    .food-dropdown-body .food-menu-context .food-input {\n      border-top: 1px solid lightgray;\n      padding: 0 20px 0 20px;\n      width: 260px;\n      text-align: center; }\n      .food-dropdown-body .food-menu-context .food-input input {\n        width: 210px;\n        height: 20px;\n        outline: none;\n        border: none;\n        padding: 2px; }\n    .food-dropdown-body .food-menu-context .food-input:focus {\n      outline: none; }\n  .food-dropdown-body .food-dropdown {\n    -webkit-box-shadow: 0px 10px 10px 0.5px rgba(0, 0, 0, 0.8);\n    -moz-box-shadow: 0px 10px 10px 0.5px rgba(0, 0, 0, 0.8);\n    box-shadow: 0px 10px 10px 0.5px rgba(0, 0, 0, 0.8);\n    position: absolute;\n    transform: translateY(1px);\n    z-index: 3000;\n    left: 0;\n    width: 240px;\n    max-height: 150px;\n    padding: 10px;\n    background-color: rgba(255, 255, 255, 0.9);\n    border-bottom-right-radius: 10px;\n    border-bottom-left-radius: 10px;\n    overflow-y: scroll; }\n    .food-dropdown-body .food-dropdown .row:hover {\n      background-color: lightgray; }\n    .food-dropdown-body .food-dropdown .row {\n      display: flex;\n      flex-direction: row;\n      justify-content: space-between;\n      width: auto;\n      height: 20px;\n      padding: 2px 10px 2px 10px;\n      background-color: rgba(255, 255, 255, 0.7);\n      font-size: 12px; }\n", ""]);
 
 	// exports
 
@@ -415,9 +415,7 @@
 
 	__webpack_require__(8);
 	__webpack_require__(14);
-	__webpack_require__(15);
-	__webpack_require__(16);
-	__webpack_require__(21);
+	__webpack_require__(17);
 
 /***/ }),
 /* 8 */
@@ -10924,6 +10922,7 @@
 	      };
 	    });
 	  }
+
 	  unhideOnBackspace() {
 	    let rows = $('.food-name');
 	    $.each(rows, function (i, tdTag) {
@@ -10934,50 +10933,124 @@
 	      };
 	    });
 	  }
-
 	}
 
 	module.exports = FoodFilter;
 
 /***/ }),
 /* 14 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-	class Food {
-
-	  constructor(args) {
-	    this.name = args['name'];
-	    this.calories = args['calories'];
-	    this.id = args['id'];
-	  }
-	};
-
-	module.exports = Food;
+	__webpack_require__(15);
+	__webpack_require__(16);
+	__webpack_require__(18);
+	__webpack_require__(20);
 
 /***/ }),
 /* 15 */
 /***/ (function(module, exports) {
 
-	class Meal {
+	function diaryFrame() {
+	  return `<section class='diary-frame'></section>`;
+	};
 
-	  constructor(params) {
-	    this.name = params['name'];
-	    this.id = params['id'];
-	    this.foods = params['foods'];
-	    this.base = 0;
+	function mealCard(meal) {
+	  return `<div class='meal-card' data-id='${meal.id}', id='meal-card${meal.id}'>
+	            <header class='meal-header'>${meal.name}</header>
+	            <table class='meal-table'>
+	              <thead class='header'>
+	                <tr>
+	                  <th class='name'>Name</th>
+	                  <th class='cals'>Calories</th>
+	                </tr>
+	              </thead>
+	              <tbody class='foods'>
+	              </tbody>
+	              <tfoot class='totals'>
+	                <tr class='total'>
+	                  <td class='name'>Total</td>
+	                  <td class='cals'></td>
+	                </tr>
+	                <tr class='remaining'>
+	                  <td class='name'>Remaining</td>
+	                  <td class='cals'></td>
+	                </tr>
+	              </tfoot>
+	            </table>
+	          </div>`;
+	};
+
+	function foodRow(food) {
+	  return `<tr class='row' id='foodrow${food.id}' data-foodId='${food.id}'>
+	            <td class='name'>${food.name}</td>
+	            <td class='cals'>${food.calories}</td>
+	            <td class='rmv-btn'>X</td>
+	          </tr>`;
+	};
+
+	function foodMenuContext() {
+	  return `<tbody class='food-dropdown-body'>
+	            <tr class='row food-menu-context'>
+	              <td class='food-input' colspan='3'>
+	                <input type='text' placeholder='Search for Food'></input>
+	              </td>
+	            </tr>
+	          </tbody>`;
+	};
+
+	function foodDropDown() {
+	  return `<div class='food-dropdown'>
+
+	          </div>`;
+	}
+
+	function foodDropDownRow(food) {
+	  return `<div class='row' data-id=${food.id}>
+	            <span>${food.name}</span>
+	            <span>${food.calories}</span>
+	          </div>`;
+	}
+
+	module.exports = { diaryFrame,
+	  mealCard,
+	  foodRow,
+	  foodMenuContext,
+	  foodDropDown,
+	  foodDropDownRow };
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	const html = __webpack_require__(15);
+	const Service = __webpack_require__(17);
+
+	const mealUrl = 'https://quantify-this-api.herokuapp.com/api/v1/meals';
+
+	class MealCard {
+
+	  constructor(meal) {
+	    this.meal = meal;
+	    this.mealCard;
+	    this.id = meal.id;
+	    this.name = meal.name;
+	    this.base = this.getBase()[this.name];
 	  }
 
-	  addFood(food) {
-	    this.foods.push(food);
-	    this.foods = [].concat.apply([], this.foods);
+	  serveMeal() {
+	    this.mealCard = $(html.mealCard(this)).appendTo($('.diary-frame'));
+
+	    this.serveFood();
 	  }
 
-	  removeFood(food) {
-	    this.foods.splice(this.foods.indexOf(food), 1);
+	  serveFood() {
+	    this.meal.foods.forEach(function (food) {
+	      this.mealCard.find('.foods').append(html.foodRow(food));
+	    }.bind(this));
 	  }
 
 	  total() {
-	    return this.foods.reduce(function (total, food) {
+	    return this.meal.foods.reduce(function (total, food) {
 	      return total + food.calories;
 	    }, 0);
 	  }
@@ -10985,42 +11058,104 @@
 	  remaining() {
 	    return this.base - this.total();
 	  }
+
+	  updateTotals() {
+	    this.mealCard.find('.totals .total .cals').text(this.total());
+	    this.mealCard.find('.totals .remaining .cals').text(this.remaining());
+
+	    if (this.remaining() <= 0) {
+	      $(this.mealCard).find('.totals .remaining .cals').css('color', 'red');
+	    } else {
+	      $(this.mealCard).find('.totals .remaining .cals').css('color', 'green');
+	    }
+	  }
+
+	  deleteRow(event) {
+	    let row = event.currentTarget.parentElement;
+	    let foodid = row.dataset.foodid;
+
+	    this.removeFood(foodid).then(function () {
+	      row.remove();
+
+	      this.meal.foods.find(function (food, i) {
+	        if (food.id == foodid) {
+	          return this.meal.foods.splice(i, 1);
+	        };
+	      }.bind(this));
+	    }.bind(this)).done(function () {
+	      this.updateTotals();
+	    }.bind(this)).fail(function () {
+	      alert("Could not Delete Food");
+	    });
+	  }
+
+	  removeFood(foodId) {
+	    return new Service('meals/' + this.id + '/foods/' + foodId).delete();
+	  }
+
+	  getBase() {
+	    return { Breakfast: 400,
+	      Lunch: 600,
+	      Dinner: 800,
+	      Snack: 200 };
+	  }
 	};
 
-	module.exports = Meal;
-
-/***/ }),
-/* 16 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	__webpack_require__(17);
-	__webpack_require__(22);
-	__webpack_require__(20);
-	__webpack_require__(18);
-	__webpack_require__(19);
+	module.exports = MealCard;
 
 /***/ }),
 /* 17 */
+/***/ (function(module, exports) {
+
+	
+
+	class Service {
+
+	  constructor(endpoint) {
+	    // this.baseUrl = 'https://quantify-this-api.herokuapp.com/api/v1/' + endpoint
+	    this.baseUrl = 'http://localhost:3000/api/v1/' + endpoint;
+	  }
+
+	  get(callback) {
+	    return $.get(this.baseUrl);
+	  }
+
+	  delete() {
+	    return $.ajax({
+	      url: this.baseUrl,
+	      method: 'DELETE'
+	    });
+	  }
+	}
+
+	module.exports = Service;
+
+/***/ }),
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	const html = __webpack_require__(18);
-	const MealCard = __webpack_require__(19);
-	const Service = __webpack_require__(21);
+	$ = __webpack_require__(9);
+
+	const html = __webpack_require__(15);
+	const MealCard = __webpack_require__(16);
+	const FoodMenu = __webpack_require__(19);
+	const Service = __webpack_require__(17);
 
 	class Diary {
 
 	  constructor() {
-	    this.meals;
+	    this.meals = {};
+	    this.foods = {};
 	  }
 
 	  open() {
-	    $.when(this.getMealData()).then(this.makeMeals).then(this.serveMeals).then(this.listen);
+	    this.getFoodData().then(data => this.foods = data);
+
+	    this.getMealData().then(data => this.meals = this.makeMeals(data)).then(this.serveMeals).then(this.updateTotals).then(() => this.listen());
 	  }
 
-	  findMeal(id) {
-	    return $.grep(this.meals, function (meal, i) {
-	      return meal.id == id;
-	    });
+	  getFoodData() {
+	    return new Service('foods').get();
 	  }
 
 	  getMealData() {
@@ -11039,196 +11174,120 @@
 	    mealCards.forEach(function (mealCard) {
 	      mealCard.serveMeal();
 	    });
+
+	    return mealCards;
 	  }
 
-	  listen(mealCards) {
+	  updateTotals(meals) {
+	    meals.forEach(function (meal) {
+	      meal.updateTotals();
+	    });
+
+	    return meals;
+	  }
+
+	  listen() {
+	    let foodMenu = new FoodMenu(this);
 
 	    $('.row').hover(function (event) {
-	      let btn = $(event.currentTarget).find('.rmv-btn');
-	      btn.css('display', 'flex').show();
+	      $(event.currentTarget).find('.rmv-btn').css('display', 'flex').show();
 	    }, function () {
 	      $(event.currentTarget).find('.rmv-btn').hide();
 	    });
 
-	    $('.meal-card').on("click", '.rmv-btn', function (event) {
-	      MealCard.deleteRow(event);
-	    });
+	    $('.meal-card').on('click', '.rmv-btn', function (event) {
+	      let domElement = this.findMeal(event.currentTarget.offsetParent.dataset.id);
 
-	    return mealCards;
+	      domElement.deleteRow(event);
+	    }.bind(this));
+
+	    $('.meal-card').hover(function (event) {
+	      foodMenu.addFoodMenuContext(event);
+	    }.bind(this), function (event) {
+	      foodMenu.removeFoodMenuContext();
+	    });
+	  }
+
+	  findMeal(id) {
+	    return $.grep(this.meals, function (meal, i) {
+	      return meal.id == id;
+	    })[0];
 	  }
 	};
 
 	module.exports = Diary;
 
 /***/ }),
-/* 18 */
-/***/ (function(module, exports) {
-
-	function diaryFrame() {
-	  return `<section class='diary-frame'></section>`;
-	};
-
-	function mealCard(meal) {
-	  return `<div class='meal-card' data-id='${meal.id}', id='meal-card${meal.id}'>
-	            <header class='meal-header'>${meal.name}</header>
-	            <table class='meal-table'>
-	              <thead id='header${meal.id}' class='header'>
-	                <tr>
-	                  <th class='name'>Name</th>
-	                  <th class='cals'>Calories</th>
-	                </tr>
-	              </thead>
-	              <tbody class='foods'>
-	              </tbody>
-	              <tfoot id='totals${meal.id}' class='totals'>
-	                <tr class='total'>
-	                  <td class='name'>Total</td>
-	                  <td class='cals'>${meal.total()}</td>
-	                </tr>
-	                <tr class='remaining'>
-	                  <td class='name'>Remaining</td>
-	                  <td class='cals'>${meal.remaining()}</td>
-	                </tr>
-	              </tfoot>
-	            </table>
-	          </div>`;
-	};
-
-	function foodRow(food) {
-	  return `<tr class='row' id='foodrow${food.id}' data-foodId='${food.id}'>
-	            <td class='name'>${food.name}</td>
-	            <td class='cals'>${food.calories}</td>
-	            <td class='rmv-btn'>X</td>
-	          </tr>`;
-	};
-
-	module.exports = { diaryFrame,
-	  mealCard,
-	  foodRow };
-
-/***/ }),
 /* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	const html = __webpack_require__(18);
-	const FoodRow = __webpack_require__(20);
-	const Service = __webpack_require__(21);
+	const html = __webpack_require__(15);
 
-	const mealUrl = 'https://quantify-this-api.herokuapp.com/api/v1/meals';
+	class FoodMenu {
 
-	class MealCard {
-
-	  constructor(meal) {
-	    this.meal = meal;
-	    this.id = meal.id;
-	    this.name = meal.name;
-	    this.foods = meal.foods;
-	    this.base = 0;
+	  constructor(diary) {
+	    this.diary = diary;
 	  }
 
-	  serveMeal() {
+	  addFoodMenuContext(event) {
+	    let menu = $(html.foodMenuContext()).insertAfter($(event.currentTarget).find('.foods'));
 
-	    $('.diary-frame').append(html.mealCard(this));
-	    let mealCard = $('#meal-card' + this.id);
+	    this.listen(menu);
+	  }
 
-	    this.foods.forEach(function (food) {
-	      mealCard.find('.foods').append(html.foodRow(food));
+	  removeFoodMenuContext() {
+	    $('.food-dropdown-body').remove();
+	  }
+
+	  listen(menu) {
+	    menu.find('.food-input input').focus(function (event) {
+	      this.addDropDown(event);
+
+	      $('.food-input input').on('keyup', function (event) {
+	        $('.food-dropdown').empty();
+	        this.addFilteredFoods();
+	      }.bind(this));
+	    }.bind(this));
+	  }
+
+	  addDropDown(event) {
+	    $('.food-dropdown-body').append(html.foodDropDown());
+
+	    this.addFilteredFoods(event.target);
+	  }
+
+	  addFilteredFoods() {
+	    let filter = $('.food-input input').val();
+	    let foods = this.filterFoods(filter);
+
+	    foods.forEach(function (food) {
+	      $('.food-dropdown').append(html.foodDropDownRow(food));
 	    });
 	  }
 
-	  total() {
-	    return this.foods.reduce(function (total, food) {
-	      return total + food.calories;
-	    }, 0);
-	  }
+	  filterFoods(filter) {
+	    if (filter == "") {
+	      return this.diary.foods;
+	    }
 
-	  remaining() {
-	    return this.base - this.total();
-	  }
-
-	  static deleteRow(event) {
-	    let mealCard = event.currentTarget.offsetParent;
-	    let mealId = mealCard.dataset.id;
-	    let row = event.currentTarget.parentElement;
-	    let foodid = row.dataset.foodid;
-
-	    debugger;
-	    $.when(this.removeFood(mealId, row.dataset.foodid)).then(row.remove());
-	  }
-
-	  static removeFood(mealId, foodId) {
-	    return new Service('meals/' + mealId + '/foods/' + foodId).delete();
+	    return this.diary.foods.filter(function (food) {
+	      return food.name.slice(0, filter.length).toLowerCase() == filter.toLowerCase();
+	    });
 	  }
 	};
 
-	module.exports = MealCard;
+	module.exports = FoodMenu;
 
 /***/ }),
 /* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	const html = __webpack_require__(18);
-
-	class FoodRow {
-
-	  constructor(food) {
-	    this.initialize(food);
-	  }
-
-	  initialize(food) {
-	    $(food).append(this.html(food));
-	  }
-
-	  html(food) {
-	    return html.foodRow(food);
-	  }
-	};
-
-	module.exports = FoodRow;
-
-/***/ }),
-/* 21 */
-/***/ (function(module, exports) {
-
-	
-
-	class Service {
-
-	  constructor(endpoint) {
-	    this.baseUrl = 'https://quantify-this-api.herokuapp.com/api/v1/' + endpoint;
-	    // this.baseUrl = 'http://localhost:3000/api/v1/' + endpoint
-	  }
-
-	  get(callback) {
-	    return $.get(this.baseUrl);
-	  }
-
-	  delete() {
-	    return $.ajax({
-	      url: this.baseUrl,
-	      method: 'DELETE',
-	      success: function () {
-	        alert('Success');
-	      },
-	      error: function () {
-	        alert('Failure');
-	      }
-	    });
-	  }
-	}
-
-	module.exports = Service;
-
-/***/ }),
-/* 22 */
-/***/ (function(module, exports, __webpack_require__) {
-
 	$ = __webpack_require__(9);
 
-	const Diary = __webpack_require__(17);
+	const Diary = __webpack_require__(18);
 
 	$(document).ready(function () {
-	  diary = new Diary().open();
+	   let diary = new Diary().open();
 	});
 
 /***/ })
