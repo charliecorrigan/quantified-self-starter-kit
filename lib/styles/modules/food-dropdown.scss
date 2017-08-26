@@ -18,13 +18,11 @@
       text-align: center;
 
       input {
-        width: 210px;
+        width: 100%;
         height: 20px;
 
         outline: none;
         border: none;
-
-        padding: 2px;
       }
     }
 
@@ -34,7 +32,9 @@
   }
 
   .food-dropdown-row {
-    background: lightgray;
+    @include meal-button();
+    
+    display: none;
     width: 260px;
 
     td {
@@ -47,6 +47,8 @@
 
     position: absolute;
     z-index: 3000;
+
+    transform: translateY(15px);
 
     left: 0;
 
