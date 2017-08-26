@@ -34,15 +34,18 @@
   }
 
   .food-dropdown-row {
-    display: none;
+    background: lightgray;
+    width: 260px;
+
+    td {
+      width: 100%;
+    }
   }
 
   .food-dropdown {
-    @include shadow(0px, 10px, 10px, 0.5px);
+    @include shadow(0px, 10px, 10px, 2px, 0.5);
 
     position: absolute;
-    // display: none;
-    transform: translateY(1px);
     z-index: 3000;
 
     left: 0;

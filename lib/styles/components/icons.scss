@@ -13,5 +13,32 @@
     width: 26px;
     cursor: pointer;
     cursor: hand;
+
+    overflow: hidden;
+  }
+
+  .rmv-btn {
+    @include shadow();
+
+    display: none;
+    position: absolute;
+    right: -10px;
+
+    background-image: url("../images/trash.png");
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    background-color: rgba(260, 100, 100, 0.8);
+
+    width: 19px;
+    height: 19px;
+    border-radius: 5px;
+  }
+
+  .rmv-btn:hover {
+    background-color: rgba(260, 80, 80, 1);
+    cursor: pointer;
+    cursor: hand;
   }
 }
