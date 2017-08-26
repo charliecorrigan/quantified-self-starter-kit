@@ -26,8 +26,6 @@ describe('html', function(){
     assert.include(html.mealCard(mealCard), "data-id='1'");
     assert.include(html.mealCard(mealCard), "id='meal-card1'");
     assert.include(html.mealCard(mealCard), "Breakfast");
-    assert.include(html.mealCard(mealCard), "1300");
-    assert.include(html.mealCard(mealCard), "-1300");
   });
 
   it('has diaryFrame html', function(){
