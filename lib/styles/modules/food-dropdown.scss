@@ -32,12 +32,11 @@
   }
 
   .food-dropdown-row {
-    @include meal-button();
-    
     display: none;
     width: 260px;
 
     td {
+      @include meal-button();
       width: 100%;
     }
   }
