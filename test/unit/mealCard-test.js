@@ -23,8 +23,7 @@ describe('mealCard', function(){
     assert.equal(mealCard.meal, meal)
     assert.equal(mealCard.name, 'Breakfast')
     assert.equal(mealCard.id, 1)
-    assert.deepEqual(mealCard.foods, [food1, food2])
-    assert.equal(mealCard.base, 0)
+    assert.equal(mealCard.base, 400)
   });
 
   it('can calc total calories', function(){
@@ -32,6 +31,7 @@ describe('mealCard', function(){
   })
 
   it('can calc remaining calories', function(){
-    assert.equal(mealCard.remaining(), -1300)
+    mealCard.base = 2000
+    assert.equal(mealCard.remaining(), 700)
   })
 });
