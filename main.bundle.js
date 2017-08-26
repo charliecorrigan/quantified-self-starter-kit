@@ -10874,8 +10874,8 @@
 	  postNewFood(foodParams) {
 	    $.post(apiFoodUrl, foodParams).then(function (result) {
 	      $('.manage-foods > tbody > tr:first').after(html.foodRow(result));
-	      this.clearForm;
-	    }).catch(this.handleError);
+	      this.clearForm();
+	    }.bind(this)).catch(this.handleError);
 	  }
 
 	  handleError(error) {
@@ -10999,9 +10999,7 @@
 	};
 
 	function foodDropDown() {
-	  return `<div class='food-dropdown'>
-
-	          </div>`;
+	  return `<div class='food-dropdown'></div>`;
 	}
 
 	function foodDropDownRow(food) {
@@ -11070,6 +11068,16 @@
 	    }
 	  }
 
+	  addFood(foodId) {
+	    return new Service('meals/' + this.id + '/foods/' + foodId).put();
+	  }
+
+	  addRow(foodId) {
+	    this.addFood(foodId).then(function (result) {
+	      debugger;
+	    });
+	  }
+
 	  deleteRow(event) {
 	    let row = event.currentTarget.parentElement;
 	    let foodid = row.dataset.foodid;
@@ -11113,16 +11121,21 @@
 
 	  constructor(endpoint) {
 	    // this.baseUrl = 'https://quantify-this-api.herokuapp.com/api/v1/' + endpoint
-	    this.baseUrl = 'http://localhost:3000/api/v1/' + endpoint;
+	    this.baseUrl = 'http://localhost:3000/api/v1/';
+	    this.endpoint = endpoint;
 	  }
 
-	  get(callback) {
-	    return $.get(this.baseUrl);
+	  get() {
+	    return $.get(this.baseUrl + this.endpoint);
+	  }
+
+	  put() {
+	    return $.post(this.baseUrl + this.endpoint);
 	  }
 
 	  delete() {
 	    return $.ajax({
-	      url: this.baseUrl,
+	      url: this.baseUrl + this.endpoint,
 	      method: 'DELETE'
 	    });
 	  }
@@ -11208,6 +11221,11 @@
 	    });
 	  }
 
+	  addFood(mealId, foodId) {
+	    let mealCard = this.findMeal(mealId);
+	    mealCard.addRow(foodId);
+	  }
+
 	  findMeal(id) {
 	    return $.grep(this.meals, function (meal, i) {
 	      return meal.id == id;
@@ -11246,6 +11264,13 @@
 	      $('.food-input input').on('keyup', function (event) {
 	        $('.food-dropdown').empty();
 	        this.addFilteredFoods();
+	      }.bind(this));
+
+	      $('.food-dropdown .row').on('click', function (event) {
+	        let mealid = event.currentTarget.offsetParent.offsetParent.dataset.id;
+	        let foodid = event.currentTarget.dataset.id;
+
+	        this.diary.addFood(mealid, foodid);
 	      }.bind(this));
 	    }.bind(this));
 	  }
