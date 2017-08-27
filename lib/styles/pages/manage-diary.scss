@@ -114,3 +114,53 @@
     }
   }
 }
+
+header.daily-total {
+  background-color: white;
+  opacity: .97;
+  width: 82%;
+  margin: 0px auto;
+  border-radius: 10px;
+  @include shadow();
+  display: block;
+  overflow: hidden;
+
+  #food-diary-header {
+    float: left;
+    margin: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .totals-table {
+    padding-top: 20px;
+    .left-div {
+      float: left;
+      width: 35%;
+      text-align: right;
+    }
+
+    .right-div {
+      float: right;
+      width: 15%;
+      text-align: right;
+      padding-right: 20px;
+    }
+  }
+  // ul {
+  // float: right;
+  // list-style-type: none;
+  // padding-left: 10px;
+  // width: 40%
+  // }
+
+  // li {
+  //   text-align: left;
+  //   float: left;
+
+  //   #goal-calories {
+  //     background-color: red;
+  //     text-align: right;
+  //   }
+  // }
+}
