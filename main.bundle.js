@@ -11056,7 +11056,6 @@
 
 	  serveMeal() {
 	    this.mealCard = $(html.mealCard(this)).appendTo($('.diary-frame'));
-
 	    this.serveFood();
 	  }
 
@@ -11275,10 +11274,12 @@
 	  listen() {
 	    let foodMenu = new FoodMenu(this);
 
-	    $('.meal-card .row').hover(function (event) {
+	    $('.meal-card').on('mouseenter', '.row', function (event) {
 	      $(event.currentTarget).find('.rmv-btn').css('display', 'flex').show();
-	    }, function () {
-	      $(event.currentTarget).find('.rmv-btn').hide();
+	    });
+
+	    $('.meal-card').on('mouseleave', '.row', function (event) {
+	      $(event.currentTarget).find('.rmv-btn').css('display', 'flex').hide();
 	    });
 
 	    $('.meal-card').on('click', '.rmv-btn', function (event) {
@@ -11336,8 +11337,7 @@
 	      this.showDropDown(event, menu);
 
 	      $('.food-input input').on('keyup', function (event) {
-	        $('.food-dropdown').empty();
-	        this.addFilteredFoods();
+	        this.addFilteredFoods(event);
 	      }.bind(this));
 
 	      $('.food-dropdown .row').on('click', function (event) {
@@ -11356,17 +11356,18 @@
 	  showDropDown(event, menu) {
 	    $('.food-dropdown-row').show();
 
-	    this.addFilteredFoods(event.target);
+	    this.addFilteredFoods(event);
 	  }
 
-	  addFilteredFoods() {
-	    let filter = $('.food-input input').val();
-	    let foods = this.filterFoods(filter);
-
+	  addFilteredFoods(event) {
 	    $('.food-dropdown').empty();
 
+	    let filter = $(event.currentTarget).val();
+	    let foods = this.filterFoods(filter);
+	    let foodDropDown = $(event.target.offsetParent.offsetParent).find('.food-dropdown');
+
 	    foods.forEach(function (food) {
-	      $('.food-dropdown').append(html.foodDropDownRow(food));
+	      foodDropDown.append(html.foodDropDownRow(food));
 	    });
 	  }
 
