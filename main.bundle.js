@@ -10702,7 +10702,8 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	const html = __webpack_require__(11);
-	const apiFoodUrl = 'https://quantify-this-api.herokuapp.com/api/v1/foods/';
+	const apiFoodUrl = 'https://quantify-this-api-express.herokuapp.com/api/v1/foods/';
+	// const apiFoodUrl = 'http://localhost:3000/api/v1/foods/'
 
 	class FoodTable {
 
@@ -10849,7 +10850,8 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	const html = __webpack_require__(11);
-	const apiFoodUrl = 'https://quantify-this-api.herokuapp.com/api/v1/foods/';
+	const apiFoodUrl = 'https://quantify-this-api-express.herokuapp.com/api/v1/foods/';
+	// const apiFoodUrl = 'http://localhost:3000/api/v1/foods/'
 
 	class FoodForm {
 	  constructor() {}
@@ -11143,7 +11145,7 @@
 	class Service {
 
 	  constructor(endpoint) {
-	    this.baseUrl = 'https://quantify-this-api.herokuapp.com/api/v1/';
+	    this.baseUrl = 'https://quantify-this-api-express.herokuapp.com/api/v1/';
 	    // this.baseUrl = 'http://localhost:3000/api/v1/'
 	    this.endpoint = endpoint;
 	  }
