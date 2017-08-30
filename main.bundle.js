@@ -10870,7 +10870,7 @@
 	      event.preventDefault();
 	      var foodName = $('input[name="new-food-name"]').val();
 	      var foodCalories = $('input[name="new-food-calories"]').val();
-	      this.postNewFood({ food: { name: foodName, calories: foodCalories } });
+	      this.postNewFood({ name: foodName, calories: foodCalories });
 	    }.bind(this));
 	  }
 
