@@ -10773,6 +10773,7 @@
 
 	  editFood(field, newFoodValue, id) {
 	    let params = this.assignParams(field, newFoodValue);
+	    debugger;
 	    $.ajax({
 	      type: "PUT",
 	      url: apiFoodUrl + id,
