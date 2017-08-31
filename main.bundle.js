@@ -10777,7 +10777,7 @@
 	    $.ajax({
 	      type: "PUT",
 	      url: apiFoodUrl + id,
-	      data: { food: params }
+	      data: params
 	    }).catch(function (error) {
 	      console.log(error);
 	    });
